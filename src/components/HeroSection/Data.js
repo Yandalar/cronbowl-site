@@ -1,50 +1,48 @@
+import _ from "underscore";
 import "./dataElements.css";
 
-export const TableOne = (tabOneOpen) => {
-  let show = tabOneOpen;
-
-  if (tabOneOpen === true) {
-    return (
-      <div className="tableContainer">
-        <table className="styledTable">
-          <thead>
-            <tr>
-              <th>Rango</th>
-              <th>Equipo</th>
-              <th>Puntos</th>
-              <th>Entrenador</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Prueba1</td>
-              <td>Prueba1</td>
-              <td>Prueba1</td>
-              <td>Prueba1</td>
-            </tr>
-            <tr className="active-row">
-              <td>Prueba2</td>
-              <td>Prueba2</td>
-              <td>Prueba2</td>
-              <td>Prueba2</td>
-            </tr>
-            <tr>
-              <td>Prueba3</td>
-              <td>Prueba3</td>
-              <td>Prueba3</td>
-              <td>Prueba2</td>
-            </tr>
-            <tr className="active-row">
-              <td>Prueba4</td>
-              <td>Prueba4</td>
-              <td>Prueba4</td>
-              <td>Prueba4</td>
-            </tr>
-          </tbody>
-        </table>
+export const StandingsTable = ({ data }) => {
+  const competitions = _.groupBy(data, ({ id_competition }) => id_competition);
+  return (
+    <div className="tableContainer">
+      <div className="tableOneWrapper">
+        {Object.entries(competitions).map(([id_competition, standings]) => {
+          return (
+            <table className="styledTable">
+              <thead>
+                <tr>
+                  <th>Equipo</th>
+                  <th>Raza</th>
+                  <th>Coach</th>
+                  <th>TV</th>
+                  <th>Pts</th>
+                  <th>V</th>
+                  <th>E</th>
+                  <th>D</th>
+                </tr>
+              </thead>
+              <tbody>
+                {standings.map((row) => {
+                  return (
+                    <tr>
+                      <td>{row.team}</td>
+                      <td>{row.race_name}</td>
+                      <td>{row.coach}</td>
+                      <td>{row.tv}</td>
+                      <td>{row.points}</td>
+                      <td>{row.win}</td>
+                      <td>{row.draw}</td>
+                      <td>{row.lost}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          );
+        })}
       </div>
-    );
-  } else return <></>;
+    </div>
+  );
 };
 
 export const TableTwo = () => {

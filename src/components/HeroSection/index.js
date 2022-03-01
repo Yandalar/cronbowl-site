@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./HeroElements.css";
-import { TableOne, TableTwo } from "./Data";
+import { StandingsTable, TableTwo } from "./Data";
 
-const Hero = (tabOneOpen) => {
+const Hero = ({ tabOneOpen, data }) => {
   return (
     <>
       <div className="body">
         <div className="backgroundImage">
-          <TableOne tabOneOpen={tabOneOpen} />
+          {tabOneOpen && <StandingsTable data={data.standings} />}
           {/* <TableTwo /> */}
         </div>
       </div>
