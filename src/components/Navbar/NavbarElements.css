@@ -129,3 +129,16 @@ button:hover {
     color: #fff;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .side {
+    display: block;
+    position: absolute;
+    top: 5%;
+    right: -40px;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+  }
+}
