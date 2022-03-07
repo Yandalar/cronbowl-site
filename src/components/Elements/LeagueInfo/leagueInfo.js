@@ -1,5 +1,5 @@
 import _ from "underscore";
-import "./dataElements.css";
+import "./leagueInfo.css";
 
 export const StandingsTable = ({ data }) => {
   const competitions = _.groupBy(data, ({ id_competition }) => id_competition);
@@ -41,49 +41,6 @@ export const StandingsTable = ({ data }) => {
           );
         })}
       </div>
-    </div>
-  );
-};
-
-export const TableTwo = () => {
-  return (
-    <div className="tableContainer">
-      <table className="styledTable">
-        <thead>
-          <tr>
-            <th>OTRA TABLA</th>
-            <th>OTRA TABLA</th>
-            <th>OTRA TABLA</th>
-            <th>OTRA TABLA</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>OTRA TABLA</td>
-            <td>OTRA TABLA</td>
-            <td>OTRA TABLA</td>
-            <td>OTRA TABLA</td>
-          </tr>
-          <tr className="active-row">
-            <td>OTRA TABLA</td>
-            <td>OTRA TABLA</td>
-            <td>OTRA TABLA</td>
-            <td>OTRA TABLA</td>
-          </tr>
-          <tr>
-            <td>OTRA TABLA</td>
-            <td>OTRA TABLA</td>
-            <td>OTRA TABLA</td>
-            <td>OTRA TABLA</td>
-          </tr>
-          <tr className="active-row">
-            <td>OTRA TABLA</td>
-            <td>OTRA TABLA</td>
-            <td>OTRA TABLA</td>
-            <td>OTRA TABLA</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   );
 };

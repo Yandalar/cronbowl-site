@@ -2,7 +2,7 @@ import "./NavbarElements.css";
 import { FaBars } from "react-icons/fa";
 import logo from "../images/logo.png";
 
-const Navbar = ({ toggle, openClose }) => {
+const Navbar = ({ toggle, setOpenTable }) => {
   return (
     <>
       <div className="navContainer">
@@ -16,23 +16,33 @@ const Navbar = ({ toggle, openClose }) => {
           <div className="menuContainer">
             <ul className="navMenu">
               <li>
-                <button onClick={openClose}>Liga CronBowl</button>
+                <button
+                  className="buttonNavbar"
+                  onClick={() => setOpenTable("standings")}
+                >
+                  Liga CronBowl
+                </button>
               </li>
               <li>
-                <button>Equipos</button>
+                <button
+                  className="buttonNavbar"
+                  onClick={() => setOpenTable("teams")}
+                >
+                  Equipos
+                </button>
               </li>
               <li>
-                <button>Ligas Anteriores</button>
+                <button className="buttonNavbar">Ligas Anteriores</button>
               </li>
               <li>
-                <button>Estadisticas</button>
+                <button className="buttonNavbar">Estadisticas</button>
               </li>
               <li>
-                <button>Salon de la Fama</button>
+                <button className="buttonNavbar">Salon de la Fama</button>
               </li>
             </ul>
           </div>
-          <button className="side" onClick={toggle}>
+          <button className="side buttonNavbar" onClick={toggle}>
             <FaBars />
           </button>
         </div>

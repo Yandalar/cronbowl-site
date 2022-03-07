@@ -19,19 +19,14 @@ const App = () => {
     console.log(`isOpen ahora es ${isOpen}`);
   };
 
-  const [tabOneOpen, setTabOneOpen] = useState(false);
-
-  const openClose = () => {
-    setTabOneOpen(!tabOneOpen);
-    console.log(`tabOneOpen is ${tabOneOpen}`);
-  };
+  const [openTable, setOpenTable] = useState("standings");
 
   if (data === null) return null;
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle} openClose={openClose} />
-      <Navbar toggle={toggle} openClose={openClose} />
-      <Hero tabOneOpen={tabOneOpen} openClose={openClose} data={data} />
+      <Sidebar isOpen={isOpen} toggle={toggle} setOpenTable={setOpenTable} />
+      <Navbar toggle={toggle} setOpenTable={setOpenTable} />
+      <Hero openTable={openTable} data={data} setOpenTable={setOpenTable} />
     </>
   );
 };
