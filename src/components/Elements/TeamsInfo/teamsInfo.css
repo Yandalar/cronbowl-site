@@ -1,0 +1,34 @@
+.tableTeamsWrapper {
+  background-color: rgb(0, 29, 56, 0.8);
+  padding: 25px 25px;
+  display: flex;
+  justify-content: center;
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+@media screen and (max-width: 480px) {
+  .tableTeamsWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    row-gap: 5px;
+  }
+}
+
+.buttonTeams {
+  border: none;
+  background: none;
+  color: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+}
+
+.buttonTeams:hover {
+  font-size: large;
+}
+
+.rosterButton {
+  width: 100px;
+}

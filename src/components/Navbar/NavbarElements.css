@@ -78,7 +78,7 @@ li {
   align-self: right;
 }
 
-button {
+.buttonNavbar {
   font-family: "Monserrat", sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -92,14 +92,14 @@ button {
   color: #fff;
 }
 
-button:hover {
+.buttonNavbar:hover {
   background-color: #5d98ba;
   color: #22272b;
 }
 
 @media screen and (max-width: 1450px) {
   .navMenu li,
-  button {
+  .buttonNavbar {
     font-size: small;
     text-decoration: none;
   }
@@ -108,7 +108,7 @@ button:hover {
 @media screen and (max-width: 1200px) {
   .navMenu li,
   a,
-  button {
+  .buttonNavbar {
     display: none;
   }
 }

@@ -13,10 +13,3 @@
   width: 100vw;
   height: auto;
 }
-
-.tableWrapper {
-  height: 250px;
-  width: 300px;
-  background-color: #0c0c0c;
-  z-index: 50;
-}

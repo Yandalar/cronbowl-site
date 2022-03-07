@@ -8,7 +8,7 @@ import {
   SidebarWrapper,
 } from "./SidebarElements";
 
-const Sidebar = ({ isOpen, toggle, openClose }) => {
+const Sidebar = ({ isOpen, toggle, setOpenTable }) => {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
@@ -16,11 +16,21 @@ const Sidebar = ({ isOpen, toggle, openClose }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink onClick={openClose}>Liga CronBowl</SidebarLink>
-          <SidebarLink>Equipos</SidebarLink>
-          <SidebarLink>Ligs Anteriores</SidebarLink>
-          <SidebarLink>Estadisticas</SidebarLink>
-          <SidebarLink>Salon de la Fama</SidebarLink>
+          <SidebarLink
+            className="buttonNavbar"
+            onClick={() => setOpenTable("standings")}
+          >
+            Liga CronBowl
+          </SidebarLink>
+          <SidebarLink
+            className="buttonNavbar"
+            onClick={() => setOpenTable("teams")}
+          >
+            Equipos
+          </SidebarLink>
+          <SidebarLink className="buttonNavbar">Ligs Anteriores</SidebarLink>
+          <SidebarLink className="buttonNavbar">Estadisticas</SidebarLink>
+          <SidebarLink className="buttonNavbar">Salon de la Fama</SidebarLink>
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>
