@@ -28,9 +28,24 @@ const Sidebar = ({ isOpen, toggle, setOpenTable }) => {
           >
             Equipos
           </SidebarLink>
-          <SidebarLink className="buttonNavbar">Ligs Anteriores</SidebarLink>
-          <SidebarLink className="buttonNavbar">Estadisticas</SidebarLink>
-          <SidebarLink className="buttonNavbar">Salon de la Fama</SidebarLink>
+          <SidebarLink
+            className="buttonNavbar"
+            onClick={() => setOpenTable("pastLeagues")}
+          >
+            Ligas Anteriores
+          </SidebarLink>
+          <SidebarLink
+            className="buttonNavbar"
+            onClick={() => setOpenTable("matchResults")}
+          >
+            Resultados
+          </SidebarLink>
+          <SidebarLink
+            className="buttonNavbar"
+            onClick={() => setOpenTable("hallOfFame")}
+          >
+            Salon de la Fama
+          </SidebarLink>
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>
