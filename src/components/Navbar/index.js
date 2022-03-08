@@ -32,13 +32,28 @@ const Navbar = ({ toggle, setOpenTable }) => {
                 </button>
               </li>
               <li>
-                <button className="buttonNavbar">Ligas Anteriores</button>
+                <button
+                  className="buttonNavbar"
+                  onClick={() => setOpenTable("pastLeagues")}
+                >
+                  Ligas Anteriores
+                </button>
               </li>
               <li>
-                <button className="buttonNavbar">Estadisticas</button>
+                <button
+                  className="buttonNavbar"
+                  onClick={() => setOpenTable("matchResults")}
+                >
+                  Resultados
+                </button>
               </li>
               <li>
-                <button className="buttonNavbar">Salon de la Fama</button>
+                <button
+                  className="buttonNavbar"
+                  onClick={() => setOpenTable("hallOfFame")}
+                >
+                  Salon de la Fama
+                </button>
               </li>
             </ul>
           </div>

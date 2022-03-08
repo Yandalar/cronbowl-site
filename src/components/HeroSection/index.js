@@ -3,6 +3,9 @@ import { StandingsTable } from "../Elements/LeagueInfo/leagueInfo";
 import { TeamsTable } from "../Elements/TeamsInfo/teamsInfo";
 import { TeamRoster } from "../Elements/TeamsInfo/Teams/teamRoster";
 import { useState } from "react";
+import PastLeagues from "../Elements/PastLeagues";
+import MatchResults from "../Elements/MatchResults";
+import HallOfFame from "../Elements/HallOfFame";
 
 const Hero = ({ openTable, data, setOpenTable }) => {
   const [openTeam, setOpenTeam] = useState();
@@ -28,6 +31,9 @@ const Hero = ({ openTable, data, setOpenTable }) => {
               setOpenTable={setOpenTable}
             />
           )}
+          {openTable === "pastLeagues" && <PastLeagues />}
+          {openTable === "matchResults" && <MatchResults />}
+          {openTable === "hallOfFame" && <HallOfFame />}
         </div>
       </div>
     </>
